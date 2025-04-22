@@ -271,7 +271,7 @@ a img:hover {
     font-family: 'Georgia', serif;
     font-weight: bold;
     top: 685px; /* Adjust this to control how far down it appears */
-    left: 100px;
-    text-align: center;
+    left: 60%;
+    text-align: left;
 
 }
