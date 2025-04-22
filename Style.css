@@ -258,8 +258,8 @@ a img:hover {
     color: #fff; /* White text for visibility */
     font-family: 'Arial', sans-serif;
     position: absolute;
-    top: 230px; /* Adjust this to control how far down it appears */
-    left: 50%; /* Aligns the text to the left side */
+    top: 190px; /* Adjust this to control how far down it appears */
+    left: 20%; /* Aligns the text to the left side */
     transform: translateX(-50%);  /*Centers it horizontally */
     width: 35%; /* Adjust the width of the text box */
     text-align: left; /* Align text to the left */
