@@ -275,3 +275,26 @@ a img:hover {
     text-align: left;
 
 }
+
+.main4 {
+    font-size: 18px;
+    color: #fff; /* White text for visibility */
+    font-family: 'Arial', sans-serif;
+    position: absolute;
+    top: 190px; /* Adjust this to control how far down it appears */
+    left: 70%; /* Aligns the text to the left side */
+    transform: translateX(-50%);  /*Centers it horizontally */
+    width: 35%; /* Adjust the width of the text box */
+    text-align: left; /* Align text to the left */
+}
+
+.project2 {
+    font-size: 16px;
+    color: #fff;
+    font-family: 'Georgia', serif;
+    font-weight: bold;
+    top: 190px; /* Adjust this to control how far down it appears */
+    left: 70%;
+    text-align: left;
+
+}
