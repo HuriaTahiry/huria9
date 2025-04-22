@@ -1,196 +1,300 @@
-* {
+* { 
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     font-family: 'Times New Roman', Times, serif;
 }
-
 .header {
     min-height: 100vh;
     width: 100%;
-    background: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url('Images/pic.jpeg') center/cover no-repeat;
+    background-image: linear-
+    gradinet(rgba(4,9,30,7), rgba(4,9,30,7)), url(Images/pic.jpeg);
+    background-position: center;
+    background-size: cover;
     position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 }
-
-/* NAVIGATION */
 nav {
     display: flex;
     padding: 2% 6%;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
 }
-
-nav img {
-    width: 120px;
+nav img{
+    width: 150px;
 }
-
-.nav-links {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
+.nav-links{
+    flex: 1;
+    text-align: right;
 }
-
-.nav-links ul {
-    display: flex;
-    gap: 15px;
+nav-links ul li {
     list-style: none;
-    align-items: center;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
 }
-
-.nav-links ul li a {
+.nav-links ul li a{
     color: #fff;
     text-decoration: none;
-    font-size: 16px;
-    transition: 0.3s;
+    font-size: 13px;
+}
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #f44336;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+.nav-links {
+    display: flex;  
+    justify-content: flex-end;
+    gap: 20px;      /* Space between the links */
 }
 
-.nav-links ul li:hover a {
-    color: #f44336;
+.nav-links a {
+    text-decoration: none;  /* Remove underline */
+    color: #007BFF;         /* Link color */
+    font-size: 16px;         /* Font size */
 }
 
-/* MAIN TEXT BOX */
-.text-box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 5vh 2vw;
-    color: #fff;
-    text-align: center;
-    position: relative;
+.nav-links a:hover {
+    color: #f44336;          /* Color change on hover */
+}
+
+.text-box{
+    position: relative;  /* Position the container */
+    width: 250%;         /* Set container width */
+    height: 850px; 
+
+}
+.background-image {
+    width: 100%;    /* Make the image responsive */
+    height: auto;   /* Maintain the aspect ratio */
+    position: absolute;
+    
+    
 }
 
 .color-box {
-    background-color: rgba(39, 41, 49, 0.7);
-    padding: 2rem;
-    border-radius: 10px;
-    max-width: 90%;
-    margin: 2rem auto;
+    position: absolute;  /* Position the color box on top of the image */
+    top: 150px;           /* Adjust this value to control the position */
+    left: 300px;          /* Adjust this value to control the position */
+    width: 350px;        /* Set the width of the color box */
+    height: 600px;       /* Set the height of the color box */
+    background-color: rgba(39, 41, 49, 0.726); /* Color of the box with transparency */
+    z-index: 1;          /* Ensure the color box is above the image */
+}
+.text-box {
+    position: relative;  /* Establish the container as a positioned element */
+    width: 100%;  /* Set the container width */
+    height: 400px;  /* Set the height (you can adjust as needed) */
+}
+
+.text-box {
+    width: 100%;    /* Set background image size */
+    height: auto;   /* Maintain aspect ratio */
 }
 
 .overlay-image {
-    width: 150px;
+    position: absolute;  /* Position relative to the parent container */
+    top: 190px;           /* Adjust top distance */
+    left: 375px;          /* Adjust left distance */
+    width: 200px;        /* Set size of the overlay image */
+    height: auto;        /* Maintain aspect ratio */
     border-radius: 50%;
-    margin: 1rem auto;
+    z-index: 2;          /* Make sure it's on top */
 }
 
-/* TEXT STYLING */
-.text,
-.text2,
-.text3,
-.fix,
-.main,
-.matn,
-.matn2,
-.project,
-.project2,
-.main3,
-.main4,
-.education {
-    color: #fff;
-    margin: 1rem 0;
+
+.color-box2 {
+    font-size: 40px;  /* Larger font size for 'Huria Tahiry' */
+    font-family: 'Arial', sans-serif; /* Example font */
     text-align: center;
+    z-index: 1;
 }
 
-.fix {
-    font-size: 2.5rem;
+.text {
+    position: relative;  /* Using relative positioning */
+    font-size: 48px;     /* Larger font size for name */
+    top: 330px;           /* Adjust top distance */
+    color:#fff;
+    
+    font-family: 'Georgia', serif; /* Example font */
     font-weight: bold;
 }
 
-.main,
-.main3,
-.main4,
-.education {
-    max-width: 90%;
-    margin: auto;
-    font-size: 1.1rem;
+.color-box3 {
+    font-size: 20px;  /* Smaller font size for additional info */
+    font-family: 'Arial', sans-serif; /* Example font */
+    text-align: center;
 }
 
-/* RESPONSIVE IMAGES */
-.res1 {
-    width: 100%;
-    height: auto;
+.text2 {
+    position: relative;  /* Adjust positioning of text2 */
+    font-size: 18px;     /* Keep it smaller */
+    top: 345px;           /* Adjust top distance */
+    color:#fff;
+    font-family: 'Arial', sans-serif;  /* Example font */
+    margin-top: 20px;  /* Add margin to separate text if needed */
 }
 
-/* RESPONSIVE DIV */
-.res2 {
-    max-width: 90%;
-    margin: 2rem auto;
-    overflow-y: auto;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 1rem;
-    border-radius: 10px;
+h1 {
+    font-size: 30px;  /* Heading size */
+    text-align: center;
+    font-family: 'Arial', sans-serif;
 }
 
-/* SOCIAL ICONS */
+.text3 {
+    position: relative;  /* Adjust positioning of text2 */
+    font-size: 18px;     /* Keep it smaller */
+    top: 350px;           /* Adjust top distance */
+    color:#fff;
+    font-family: 'Arial', sans-serif;  /* Example font */
+    margin-top: 20px;  /* Add margin to separate text if needed */
+}
 a img {
-    width: 35px;
-    height: auto;
-    border-radius: 4px;
-    transition: transform 0.3s ease;
+    width: 35px;    /* Set the image width */
+    height: auto;    /* Maintain the aspect ratio */
+   
+    border-radius: 4px; /* Optional: adds rounded corners */
+    transition: transform 0.3s ease; /* Optional: adds hover effect */
 }
 
 a img:hover {
-    transform: scale(1.1);
+    transform: scale(1.1); /* Optional: image grows slightly on hover */
+    top: 350px; 
+}
+a img {
+    width: 35px;    /* Set the image width */
+    height: auto;    /* Maintain the aspect ratio */
+   
+    border-radius: 4px; /* Optional: adds rounded corners */
+    transition: transform 0.3s ease; /* Optional: adds hover effect */
 }
 
-/* HEADINGS */
-h1 {
-    font-size: 2rem;
-    margin-top: 1rem;
+a img:hover {
+    transform: scale(1.1); /* Optional: image grows slightly on hover */
+    top: 350px; 
 }
 
-/* MEDIA QUERIES FOR RESPONSIVENESS */
-@media screen and (max-width: 768px) {
-    nav {
-        flex-direction: column;
-    }
-
-    .nav-links ul {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .text-box {
-        padding: 2vh 1vw;
-    }
-
-    .fix {
-        font-size: 2rem;
-    }
-
-    .main, .main3, .main4, .education {
-        width: 90%;
-        text-align: center;
-    }
-
-    .overlay-image {
-        width: 120px;
-    }
+.fix {
+    font-size: 40px;
+    color: #fff;
+    font-family: 'Georgia', serif;
+    font-weight: bold;
+    position: absolute;
+    top: 150px;
+    left: 58%;
+    transform: translateX(-50%);
+    text-align: center;
+    width: 100%;
 }
 
-@media screen and (max-width: 480px) {
-    .fix {
-        font-size: 1.5rem;
-    }
+.main {
+    font-size: 18px;
+    color: #fff; /* White text for visibility */
+    font-family: 'Arial', sans-serif;
+    position: absolute;
+    top: 230px; /* Adjust this to control how far down it appears */
+    left: 66%; /* Aligns the text to the left side */
+    transform: translateX(-50%);  /*Centers it horizontally */
+    width: 35%; /* Adjust the width of the text box */
+    text-align: left; /* Align text to the left */
+}
 
-    nav img {
-        width: 100px;
-    }
 
-    .text-box {
-        padding: 1rem;
-    }
+.res1 {
+    width: 100%;    /* Make the image responsive */
+    height: auto;   /* Maintain the aspect ratio */
+}
 
-    .main, .main3, .main4, .education {
-        font-size: 1rem;
-    }
+.res2 {
+    position: absolute;  /* Position the color box on top of the image */
+    top: 130px;           /* Adjust this value to control the position */
+    left: 350px;          /* Adjust this value to control the position */
+    width: 750px;        /* Set the width of the color box */
+    overflow: auto;
+    height: 650px;  
+       /* Set the height of the color box  <div style="width: 50%; "> */
+       /* Set the height of the color box  <div style="width: 50%; height: 400px;  "> */
+}
+.matn{
+    font-size: 25px;
+    color: #fff;
+    font-family: 'Georgia', serif;
+    font-weight: bold;
+    top: 330px; /* Adjust this to control how far down it appears */
+    left: 66%;
+    text-align: left;
+}
+.matn2{
+    font-size: 25px;
+    color: #fff;
+    font-family: 'Georgia', serif;
+    font-weight: bold;
+    top: 100px; /* Adjust this to control how far down it appears */
+    left: 66%;
+    text-align: left;
 
-    .res2 {
-        width: 100%;
-        padding: 1rem;
-    }
+}
+
+.education {
+    font-size: 18px;
+    color: #fff; /* White text for visibility */
+    font-family: 'Arial', sans-serif;
+    position: absolute;
+    top: 685px; /* Adjust this to control how far down it appears */
+    left: 66%; /* Aligns the text to the left side */
+    transform: translateX(-50%); /* Centers it horizontally */
+    width: 35%; /* Adjust the width of the text box */
+    text-align: left; /* Align text to the left */
+}
+
+.main3 {
+    font-size: 18px;
+    color: #fff; /* White text for visibility */
+    font-family: 'Arial', sans-serif;
+    position: absolute;
+    top: 190px; /* Adjust this to control how far down it appears */
+    left: 20%; /* Aligns the text to the left side */
+    transform: translateX(-50%);  /*Centers it horizontally */
+    width: 35%; /* Adjust the width of the text box */
+    text-align: left; /* Align text to the left */
+}
+
+.project {
+    font-size: 16px;
+    color: #fff;
+    font-family: 'Georgia', serif;
+    font-weight: bold;
+    top: 190px; /* Adjust this to control how far down it appears */
+    left: 20%;
+    text-align: left;
+
+}
+
+.main4 {
+    font-size: 18px;
+    color: #fff; /* White text for visibility */
+    font-family: 'Arial', sans-serif;
+    position: absolute;
+    top: 190px; /* Adjust this to control how far down it appears */
+    left: 70%; /* Aligns the text to the left side */
+    transform: translateX(-50%);  /*Centers it horizontally */
+    width: 35%; /* Adjust the width of the text box */
+    text-align: left; /* Align text to the left */
+}
+
+.project2 {
+    font-size: 16px;
+    color: #fff;
+    font-family: 'Georgia', serif;
+    font-weight: bold;
+    top: 190px; /* Adjust this to control how far down it appears */
+    left: 70%;
+    text-align: left;
+
 }
