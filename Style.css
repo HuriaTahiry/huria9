@@ -270,8 +270,8 @@ a img:hover {
     color: #fff;
     font-family: 'Georgia', serif;
     font-weight: bold;
-    top: 685px; /* Adjust this to control how far down it appears */
-    left: 60%;
+    top: 190px; /* Adjust this to control how far down it appears */
+    left: 20%;
     text-align: left;
 
 }
