@@ -311,4 +311,13 @@ a img:hover {
     object-fit: cover;
     display: block;
 }
-
+.res3 {
+    position: absolute;  /* Position the color box on top of the image */
+    top: 1000px;           /* Adjust this value to control the position */
+    left: 350px;          /* Adjust this value to control the position */
+    width: 750px;        /* Set the width of the color box */
+    overflow: auto;
+    height: 650px;  
+       /* Set the height of the color box  <div style="width: 50%; "> */
+       /* Set the height of the color box  <div style="width: 50%; height: 400px;  "> */
+}
