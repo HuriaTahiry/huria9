@@ -313,7 +313,7 @@ a img:hover {
 }
 .res3 {
     position: absolute;  /* Position the color box on top of the image */
-    top: 200%;           /* Adjust this value to control the position */
+    top: 220%;           /* Adjust this value to control the position */
     left: 350px;          /* Adjust this value to control the position */
     width: 750px;        /* Set the width of the color box */
     overflow: auto;
