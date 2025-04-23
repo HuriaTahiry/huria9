@@ -298,3 +298,11 @@ a img:hover {
     text-align: left;
 
 }
+.project-image {
+    width: 50%;
+    height: 30vh; 
+    object-fit: cover; 
+    display: block;
+    margin: 10px auto; 
+}
+
