@@ -1,42 +1,67 @@
 * { 
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     font-family: 'Times New Roman', Times, serif;
 }
+
+/* Header Styles */
 .header {
     min-height: 100vh;
     width: 100%;
-    background-image: linear-
-    gradinet(rgba(4,9,30,7), rgba(4,9,30,7)), url(Images/pic.jpeg);
+    background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url(Images/pic.jpeg);
     background-position: center;
     background-size: cover;
     position: relative;
 }
+
+/* Navigation Styles */
 nav {
     display: flex;
     padding: 2% 6%;
     justify-content: space-between;
     align-items: center;
 }
+
 nav img{
     width: 150px;
+    max-width: 100%;
 }
+
+/* Navigation Links */
 .nav-links{
     flex: 1;
     text-align: right;
+    display: flex;  
+    justify-content: flex-end;
+    gap: 20px;
 }
-nav-links ul li {
+
+.nav-links a {
+    text-decoration: none;
+    color: #007BFF;
+    font-size: 1rem;
+}
+
+.nav-links a:hover {
+    color: #f44336;
+}
+
+/* List Styling for Navigation (if needed) */
+.nav-links ul li {
     list-style: none;
     display: inline-block;
     padding: 8px 12px;
     position: relative;
 }
-.nav-links ul li a{
+
+.nav-links ul li a {
     color: #fff;
     text-decoration: none;
     font-size: 13px;
 }
-.nav-links ul li::after{
+
+.nav-links ul li::after {
     content: '';
     width: 0%;
     height: 2px;
@@ -45,279 +70,261 @@ nav-links ul li {
     margin: auto;
     transition: 0.5s;
 }
-.nav-links ul li:hover::after{
+
+.nav-links ul li:hover::after {
     width: 100%;
 }
-.nav-links {
-    display: flex;  
-    justify-content: flex-end;
-    gap: 20px;      /* Space between the links */
-}
 
-.nav-links a {
-    text-decoration: none;  /* Remove underline */
-    color: #007BFF;         /* Link color */
-    font-size: 16px;         /* Font size */
-}
-
-.nav-links a:hover {
-    color: #f44336;          /* Color change on hover */
-}
-
-.text-box{
-    position: relative;  /* Position the container */
-    width: 250%;         /* Set container width */
-    height: 850px; 
-
-}
+/* Background Image */
 .background-image {
-    width: 100%;    /* Make the image responsive */
-    height: auto;   /* Maintain the aspect ratio */
+    width: 100%;
+    height: auto;
     position: absolute;
-    
-    
+    left: 0;
+    top: 0;
 }
 
-.color-box {
-    position: absolute;  /* Position the color box on top of the image */
-    top: 150px;           /* Adjust this value to control the position */
-    left: 300px;          /* Adjust this value to control the position */
-    width: 350px;        /* Set the width of the color box */
-    height: 600px;       /* Set the height of the color box */
-    background-color: rgba(39, 41, 49, 0.726); /* Color of the box with transparency */
-    z-index: 1;          /* Ensure the color box is above the image */
-}
-.text-box {
-    position: relative;  /* Establish the container as a positioned element */
-    width: 100%;  /* Set the container width */
-    height: 400px;  /* Set the height (you can adjust as needed) */
-}
-
-.text-box {
-    width: 100%;    /* Set background image size */
-    height: auto;   /* Maintain aspect ratio */
+/* Boxes and Overlays */
+.color-box, .color-box2, .color-box3, .color-box4 {
+    position: absolute;
+    z-index: 1;
+    background-color: rgba(39, 41, 49, 0.726);
+    /* Sizes set in media queries */
 }
 
 .overlay-image {
-    position: absolute;  /* Position relative to the parent container */
-    top: 190px;           /* Adjust top distance */
-    left: 375px;          /* Adjust left distance */
-    width: 200px;        /* Set size of the overlay image */
-    height: auto;        /* Maintain aspect ratio */
+    position: absolute;
+    top: 190px;
+    left: 375px;
+    width: 200px;
+    height: auto;
     border-radius: 50%;
-    z-index: 2;          /* Make sure it's on top */
+    z-index: 2;
 }
 
-
-.color-box2 {
-    font-size: 40px;  /* Larger font size for 'Huria Tahiry' */
-    font-family: 'Arial', sans-serif; /* Example font */
-    text-align: center;
-    z-index: 1;
+/* Text Boxes */
+.text-box, .text2, .text3 {
+    position: relative;
+    width: 100%;
+    height: auto;
 }
 
 .text {
-    position: relative;  /* Using relative positioning */
-    font-size: 48px;     /* Larger font size for name */
-    top: 330px;           /* Adjust top distance */
-    color:#fff;
-    
-    font-family: 'Georgia', serif; /* Example font */
+    font-size: 2.5rem;
+    color: #fff;
+    font-family: 'Georgia', serif;
     font-weight: bold;
-}
-
-.color-box3 {
-    font-size: 20px;  /* Smaller font size for additional info */
-    font-family: 'Arial', sans-serif; /* Example font */
+    position: relative;
+    top: 6vw;
     text-align: center;
 }
 
-.text2 {
-    position: relative;  /* Adjust positioning of text2 */
-    font-size: 18px;     /* Keep it smaller */
-    top: 345px;           /* Adjust top distance */
-    color:#fff;
-    font-family: 'Arial', sans-serif;  /* Example font */
-    margin-top: 20px;  /* Add margin to separate text if needed */
-}
-
-h1 {
-    font-size: 30px;  /* Heading size */
-    text-align: center;
+.text2, .text3 {
+    font-size: 1.2rem;
+    color: #fff;
     font-family: 'Arial', sans-serif;
+    margin-top: 20px;
+    text-align: center;
+    position: relative;
+    top: 6.5vw;
 }
 
-.text3 {
-    position: relative;  /* Adjust positioning of text2 */
-    font-size: 18px;     /* Keep it smaller */
-    top: 350px;           /* Adjust top distance */
-    color:#fff;
-    font-family: 'Arial', sans-serif;  /* Example font */
-    margin-top: 20px;  /* Add margin to separate text if needed */
-}
-a img {
-    width: 35px;    /* Set the image width */
-    height: auto;    /* Maintain the aspect ratio */
-   
-    border-radius: 4px; /* Optional: adds rounded corners */
-    transition: transform 0.3s ease; /* Optional: adds hover effect */
-}
-
-a img:hover {
-    transform: scale(1.1); /* Optional: image grows slightly on hover */
-    top: 350px; 
-}
-a img {
-    width: 35px;    /* Set the image width */
-    height: auto;    /* Maintain the aspect ratio */
-   
-    border-radius: 4px; /* Optional: adds rounded corners */
-    transition: transform 0.3s ease; /* Optional: adds hover effect */
-}
-
-a img:hover {
-    transform: scale(1.1); /* Optional: image grows slightly on hover */
-    top: 350px; 
-}
-
+/* Fix Section */
 .fix {
-    font-size: 40px;
+    font-size: 2.5rem;
     color: #fff;
     font-family: 'Georgia', serif;
     font-weight: bold;
     position: absolute;
-    top: 150px;
-    left: 58%;
+    top: 12vw;
+    left: 50%;
     transform: translateX(-50%);
     text-align: center;
     width: 100%;
 }
 
-.main {
-    font-size: 18px;
-    color: #fff; /* White text for visibility */
+/* Main Content */
+.main, .main3, .main4, .education {
+    font-size: 1rem;
+    color: #fff;
     font-family: 'Arial', sans-serif;
     position: absolute;
-    top: 230px; /* Adjust this to control how far down it appears */
-    left: 66%; /* Aligns the text to the left side */
-    transform: translateX(-50%);  /*Centers it horizontally */
-    width: 35%; /* Adjust the width of the text box */
-    text-align: left; /* Align text to the left */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 600px;
+    text-align: left;
 }
 
+.main { top: 15vw; }
+.main3 { top: 16vw; left: 25%; transform: translateX(-25%); }
+.main4 { top: 16vw; left: 75%; transform: translateX(-75%); }
+.education { top: 40vw; }
 
-.res1 {
-    width: 100%;    /* Make the image responsive */
-    height: auto;   /* Maintain the aspect ratio */
-}
-
-.res2 {
-    position: absolute;  /* Position the color box on top of the image */
-    top: 130px;           /* Adjust this value to control the position */
-    left: 350px;          /* Adjust this value to control the position */
-    width: 750px;        /* Set the width of the color box */
-    overflow: auto;
-    height: 650px;  
-       /* Set the height of the color box  <div style="width: 50%; "> */
-       /* Set the height of the color box  <div style="width: 50%; height: 400px;  "> */
-}
-.matn{
-    font-size: 25px;
+/* Projects */
+.project, .project2 {
+    font-size: 1rem;
     color: #fff;
     font-family: 'Georgia', serif;
     font-weight: bold;
-    top: 330px; /* Adjust this to control how far down it appears */
-    left: 66%;
     text-align: left;
 }
-.matn2{
-    font-size: 25px;
-    color: #fff;
-    font-family: 'Georgia', serif;
-    font-weight: bold;
-    top: 100px; /* Adjust this to control how far down it appears */
-    left: 66%;
-    text-align: left;
 
-}
+.project { left: 25%; top: 19vw; }
+.project2 { left: 75%; top: 19vw; }
 
-.education {
-    font-size: 18px;
-    color: #fff; /* White text for visibility */
-    font-family: 'Arial', sans-serif;
-    position: absolute;
-    top: 685px; /* Adjust this to control how far down it appears */
-    left: 66%; /* Aligns the text to the left side */
-    transform: translateX(-50%); /* Centers it horizontally */
-    width: 35%; /* Adjust the width of the text box */
-    text-align: left; /* Align text to the left */
-}
-
-.main3 {
-    font-size: 18px;
-    color: #fff; /* White text for visibility */
-    font-family: 'Arial', sans-serif;
-    position: absolute;
-    top: 190px; /* Adjust this to control how far down it appears */
-    left: 20%; /* Aligns the text to the left side */
-    transform: translateX(-50%);  /*Centers it horizontally */
-    width: 35%; /* Adjust the width of the text box */
-    text-align: left; /* Align text to the left */
-}
-
-.project {
-    font-size: 16px;
-    color: #fff;
-    font-family: 'Georgia', serif;
-    font-weight: bold;
-    top: 190px; /* Adjust this to control how far down it appears */
-    left: 20%;
-    text-align: left;
-
-}
-
-.main4 {
-    font-size: 18px;
-    color: #fff; /* White text for visibility */
-    font-family: 'Arial', sans-serif;
-    position: absolute;
-    top: 190px; /* Adjust this to control how far down it appears */
-    left: 70%; /* Aligns the text to the left side */
-    transform: translateX(-50%);  /*Centers it horizontally */
-    width: 35%; /* Adjust the width of the text box */
-    text-align: left; /* Align text to the left */
-}
-
-.project2 {
-    font-size: 16px;
-    color: #fff;
-    font-family: 'Georgia', serif;
-    font-weight: bold;
-    top: 190px; /* Adjust this to control how far down it appears */
-    left: 70%;
-    text-align: left;
-
-}
+/* Responsive Image Containers */
 .image-container {
-    width: 50%;
-    height: 30vh;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
     overflow: hidden;
     margin: 10px auto;
 }
 
 .image-container img {
     width: 100%;
-    height: 100%;
+    height: auto;
     object-fit: cover;
     display: block;
 }
-.res3 {
-    position: absolute;  /* Position the color box on top of the image */
-    top: 150%;           /* Adjust this value to control the position */
-    left: 350px;          /* Adjust this value to control the position */
-    width: 750px;        /* Set the width of the color box */
+
+/* Responsive Boxes */
+.res1, .res2, .res3 {
+    width: 100%;
+    height: auto;
+    max-width: 750px;
     overflow: auto;
-    height: 650px;  
-       /* Set the height of the color box  <div style="width: 50%; "> */
-       /* Set the height of the color box  <div style="width: 50%; height: 400px;  "> */
+    margin: 0 auto;
 }
+
+.res2, .res3 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 25vw;
+}
+
+/* Matn Classes */
+.matn, .matn2 {
+    font-size: 1.3rem;
+    color: #fff;
+    font-family: 'Georgia', serif;
+    font-weight: bold;
+    text-align: left;
+    position: relative;
+    margin-top: 1em;
+}
+
+/* Icon Images */
+a img {
+    width: 35px;
+    height: auto;
+    border-radius: 4px;
+    transition: transform 0.3s ease;
+}
+
+a img:hover {
+    transform: scale(1.1);
+}
+
+/* Headings */
+h1 {
+    font-size: 2rem;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+}
+
+/* MEDIA QUERIES FOR RESPONSIVENESS */
+@media (max-width: 1024px) {
+    .main, .main3, .main4, .education {
+        font-size: 1.1rem;
+        max-width: 90vw;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .overlay-image, .color-box, .color-box2, .color-box3, .color-box4 {
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60vw !important;
+        min-width: 220px;
+        max-width: 400px;
+    }
+    .project, .project2 {
+        left: 10vw;
+        top: 22vw;
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        padding: 3% 2%;
+    }
+    .nav-links {
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 10px;
+    }
+    .main, .main3, .main4, .education {
+        font-size: 1rem;
+        top: unset;
+        position: relative;
+        width: 96vw;
+        left: 0;
+        transform: none;
+        margin: 15px auto;
+        max-width: 98vw;
+    }
+    .overlay-image, .color-box, .color-box2, .color-box3, .color-box4 {
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80vw !important;
+        min-width: 120px;
+        max-width: 300px;
+    }
+    .fix, .text, .text2, .text3 {
+        top: unset;
+        font-size: 1.5rem;
+        text-align: center;
+        position: relative;
+    }
+    .res2, .res3 {
+        width: 98vw;
+        left: 0;
+        top: unset;
+        position: relative;
+        transform: none;
+        max-width: 99vw;
+    }
+}
+
+@media (max-width: 480px) {
+    nav img {
+        width: 100px;
+    }
+    .nav-links a {
+        font-size: 0.9rem;
+    }
+    .main, .main3, .main4, .education {
+        font-size: 0.95rem;
+        padding: 10px 5px;
+    }
+    .fix, .text {
+        font-size: 1.2rem;
+    }
+    .project, .project2, .matn, .matn2 {
+        font-size: 1rem;
+    }
+    .overlay-image, .color-box, .color-box2, .color-box3, .color-box4 {
+        width: 95vw !important;
+        min-width: 80px;
+        max-width: 180px;
+    }
+    .res2, .res3 {
+        max-width: 99vw;
+        left: 0;
+        width: 99vw;
+    }
+}
+
